@@ -62,9 +62,7 @@
     color:white;
    
 }
-footer{
-   
-}
+
 .footer{
     padding:20px;
     background-color: rgb(15, 118, 179);
@@ -74,5 +72,6 @@ footer{
     
 }
 section{
-    background-color: white;
+    background-color: rgb(231, 127, 127);
+    
 }
