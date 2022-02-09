@@ -1,3 +1,4 @@
+
 *{
     
     margin: 0;
@@ -49,7 +50,7 @@ header{
 .naviteml{
     justify-self: flex-end;
     margin-right: 30px;
-    padding: 15px;
+    padding: 15px 30px;
     border-radius: 30px;
     border: 2px solid white;            
 }
@@ -57,7 +58,8 @@ header{
 .naviteml:hover{
     background-color: white;
     color: rgb(20, 28, 58);
-   transition: ease-in-out;
+    transition:all .2s ease-in-out;
+   -webkit-transition:all .2s ease-in-out;
 }
 
 .navitemf{
@@ -71,8 +73,8 @@ a{
 .sec1{
     margin: 30px 0;    
     width: 100%;
-    height: 70vh;
-    background:linear-gradient(#7510F7,rgb(125, 39, 223));
+    height: 80vh;
+    background:linear-gradient(#7510F7,rgb(67, 27, 114));
     z-index: -1;
 }
 .infosec{
@@ -81,10 +83,12 @@ a{
     text-align: center;
     color: white;
     padding: 30px 0;
-    
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 .titlesec{
     margin-bottom: 20px;
+    
     font-size: 2rem;
     font-family: 'Josefin Sans', sans-serif;
 }
@@ -104,11 +108,81 @@ a{
     width: 90%;
     min-height: 50vh;
     border-radius: 10px;
-    background-color: white;  
+    background-color: rgb(248, 239, 255);  
     display: grid;
    grid-template-columns: auto auto auto;
    box-shadow: rgb(221, 221, 221) ;
 }
+.sec3{
+    margin: auto;
+    display: block;
+    text-align: center;
+    justify-content: center;
+}
+.flex3{
+    display: flex;
+    flex-wrap: wrap;
+    
+    margin:30px auto ;
+    width: 75%;
+    justify-content: space-between;
+}
+#signature2{
+    stroke-dasharray: 143;
+    stroke-dashoffset: 143;
+    animation: sign 4s ease;
+    animation-fill-mode: forwards;
+}
+@keyframes sign {
+    to{
+        stroke-dashoffset: 0;
+    }
+}
+.box3{
+  padding: 50px;
+    margin: 10px;
+   
+    
+    width:30%;
+    background-color: rgb(31, 38, 66);
+    border-radius: 12px;
+    color: white;
+}
+.box3:hover{
+    opacity: 1;
+    -webkit-transform: scale(1);
+transform: scale(1);
+-webkit-transition: .25s ease-in-out;
+transition: .25s ease-in-out;
+}
+.project1{
+   display: flex;
+  flex-direction: column;
+  
+  font-weight: 500;
+  position:relative;
+}
+.project1 h2{
+    margin: 10px 0px;
+}
+.projectbutton{
+    margin-top: 20px;
+     padding: 15px 30px;
+   border-radius: 30px;
+   border: 2px solid rgb(130, 31, 223);  
+}
+.projectbutton a{
+    font: 1.1rem "Josefin sans";
+    
+}
+.projectbutton:hover{
+    background-color: rgb(130, 31, 223);
+    color: white;
+    transition:all 0.2s ease-in-out;
+   -webkit-transition:all 0.2s ease-in-out;
+}
+
+
 @media (max-width:900px) {
     body{
        font-size: 15px; 
@@ -117,10 +191,30 @@ a{
         padding-left: 32px;
         padding-right: 32px;
     }
+    .contbutt{
+        position: relative;
+        top: 20px
+    }
+}
+
+@media (max-width:400px){
+  .blanktitle{
+      font-size: small;
+  }
+    .container{
+        position: relative;
+        top:40px;
+    }
+    .sec1{
+        height: 70vh;
+    }
 }
 @media (max-width:700px) {
     body{
         font-size: 17px;
+    }.infosec{
+        width: 80%;
+        font-size: medium;
     }
     .banner{
         font-size: 30px;
@@ -136,27 +230,59 @@ a{
         flex-direction: column;
         top:-10rem;
     }
-    .card{
-        padding: 24px 17px;
+    .card {
+        padding: 10px;
         margin: auto ;
+        text-align: center;
+        padding: 0;
     }
     .centercol{
         padding:3px 0;
-        border: none;
+        border: none; 
+        text-align: center;
+      }
+      .blanktitle{
+          font-size: medium;
+      }
+      .contbutt{
+          padding: 5px;
+      }
+   
+    .sec1{
+        height: 50vh;
     }
     .infosec{
         width: 90%;
        
     }
+    .blanktitle{
+        font-size: small;
+    }
    .workblank{
        width: 90%;
+       height: auto;
        padding: 20px;
+       flex-direction: column;
+       align-items: center;
        justify-content: center;
    }
-   #contbutt{
+   .contbutt{
        font-size: small;
    }
-}
+   .flex3{
+       justify-content: center;
+   }
+   .box3{
+       width: 70%;
+       padding: 20px;
+   }
+   .projectbutton{
+       font: small;
+       padding: 10px;
+       height: auto;
+   }
+ }
+
 
 .container ul{
     list-style:none;
@@ -191,27 +317,36 @@ a{
     border-left: 1px solid rgb(195, 195, 195);
 }
 .workblank{
-    width: 70%;
+    width: 75%;
     background-color: white;
     color: rgb(18, 30, 47);
-    padding: 30px;
+    padding: 50px 30px;
     margin: auto;
+    margin-top: 60px;
     border-radius: 5px;
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
-#contbutt{
-   
-    padding:9px;
-    background-color: #7510F7;
-    border: none;
-    outline: none;
-    color: white;
-    border-radius: 12px;
+.blanktitle{
+    font-size: 1.5rem;
+    font-weight:bolder;
+    font-family: 'Josefin sans', 'sans serif';
 }
-#contbutt:hover{
+.contbutt{
+   
+    padding:15px 30px;
+    background-color: white;
+    border: 2px solid rgb(18, 30, 47);
+   font-weight: 600;
+    color: rgb(18, 30, 47);
+    border-radius: 40px;
+
+}
+.contbutt:hover{
     background-color: rgb(18, 30, 47);
-    
+    transition:all .2s ease-in-out;
+    color: white;
 }
 footer{
     text-align: center;
@@ -221,4 +356,5 @@ footer{
     margin-top: 20px;
     font-family:'Josefin Sans', sans-serif ;
 }
+
 
