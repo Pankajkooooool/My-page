@@ -182,7 +182,11 @@ transition: .25s ease-in-out;
    -webkit-transition:all 0.2s ease-in-out;
 }
 
-
+@media (max-height:812px){
+    .tilesec p{
+    visibility:none;
+    }
+}
 @media (max-width:900px) {
     body{
        font-size: 15px; 
