@@ -2,7 +2,7 @@
     
     margin: 0;
     padding: 0;
-    
+    box-sizing: border-box;
 }
 body{
     background-color: rgb(18, 30, 47);
@@ -11,12 +11,25 @@ body{
 }
 header{
     text-align: center;
+    font-size: 78px;   
  }
 .banner{
+    line-height: 20vh;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 48px;             
+             
     color: white;
 }
+span{
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(-50px);
+    display: inline-block;
+}
+span.fade{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
 .banner-info{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 22px;
@@ -225,7 +238,9 @@ transition: .25s ease-in-out;
         font-size: medium;
     }
     .banner{
-        font-size: 30px;
+     margin-top: 60px;
+        font-size: 50px;
+        padding: 40px;
     }
     .banner-info{
         font-size: 22px;
